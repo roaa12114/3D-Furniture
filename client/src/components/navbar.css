@@ -1,0 +1,72 @@
+.Navbar-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(247, 246, 245);
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.auth-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(108, 48, 48);
+  color: rgba(238, 224, 208);
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 85px;
+}
+
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(108, 48, 48);
+  color: antiquewhite;
+}
+
+.navbar {
+  list-style-type: none;
+  padding: 100px;
+  padding-left: 30%;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 200px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  padding-left: 180px;
+  font-size: 18px;
+  color: rgba(238, 224, 208);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}

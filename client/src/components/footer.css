@@ -1,0 +1,66 @@
+/* Footer styling */
+
+.footer-container{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#footer {
+  background-color: rgb(247, 246, 245);
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+/* Footer heading */
+#footer h1 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Footer paragraph */
+#footer p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+/* Social media icons */
+#footer .icons {
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+#footer .icons i {
+  font-size: 3rem;
+  margin: 0 0.4rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for icons */
+#footer .icons i:hover {
+  color: #000;
+}
+
+/* Copyright text */
+#footer .copyright {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Credit text */
+#footer .credite {
+  margin-bottom: 1.5rem;
+}
+#footer .credite a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#footer .credite a:hover {
+  text-decoration: underline;
+}

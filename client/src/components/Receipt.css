@@ -1,0 +1,34 @@
+.receipt-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .receipt-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .receipt-table th, .receipt-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .receipt-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .receipt-table td {
+    font-size: 16px;
+  }
+  
