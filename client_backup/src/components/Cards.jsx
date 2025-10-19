@@ -7,8 +7,7 @@ import { CartContext } from "./CartProvider";
 
 const Cards = ({ Products }) => {
 
-  console.log(JSON.stringify(Products, null, 2))
-
+  console.log(Products)
 
   const navigate = useNavigate()
 

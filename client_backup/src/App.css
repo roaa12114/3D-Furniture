@@ -1,0 +1,16 @@
+/* Global reset to remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Remove padding and margin from body */
+.App {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll caused by overflowing content */
+}
+
