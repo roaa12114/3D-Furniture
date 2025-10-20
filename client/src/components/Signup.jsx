@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Signup.css'; // Importing CSS file
+import API_BASE_URL from '../config.js';
 
 function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post('http://localhost:5000/registers', { name, email, password })
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+    try {
+      const response = await axios.post(`${API_BASE_URL}/user/register`, {
+        username: name, 
+        email,
+        password
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+      });
+
+      console.log(response.data);
+      alert("Account created successfully! 🎉");
+    } catch (err) {
+      console.error(err.response ? err.response.data : err.message);
+      alert("Error creating account. Please try again.");
+    }
   };
 
   return (

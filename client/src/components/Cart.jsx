@@ -3,6 +3,7 @@ import { CartContext } from "./CartProvider"; // Import the CartContext
 import "./Cart.css"; // Custom styling for the cart
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_BASE_URL from "../config";
 
 const Cart = () => {
   const navigate = useNavigate()
@@ -29,7 +30,7 @@ const Cart = () => {
         "amount_to_pay":totalPrice
         }
         
-        const res = await axios.post("http://localhost:8000/purchase/make-purchase", purchaseBody)
+const res = await axios.post(`${API_BASE_URL}/purchase/make-purchase`, purchaseBody);
         const data = await res.data;
         if(data){
             clearCart()

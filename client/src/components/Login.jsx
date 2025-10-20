@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css'; // Importing CSS file
+import API_BASE_URL from '../config.js';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -15,7 +16,7 @@ const Login = () => {
       console.log(username);
       console.log(password);
 
-      const res = await axios.post("http://localhost:8000/user/login", {
+      const res = await axios.post(`${API_BASE_URL}/user/login`, {
         username: username,
         password: password,
       }, {

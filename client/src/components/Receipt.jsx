@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./Receipt.css"; // Optional: Add your own CSS styling
+import API_BASE_URL from "../config";
 
 const PurchaseReceipt = () => {
   const params = useParams(); // Get purchaseId from URL
@@ -10,11 +11,12 @@ const PurchaseReceipt = () => {
   const [error, setError] = useState(null);
   const purchaseId = params.id;
 
+
   // Fetch purchase data by ID
   useEffect(() => {
     const fetchPurchase = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/purchase/get-purchase-by-id/${purchaseId}`); // Adjust URL based on your backend route
+        const response = await axios.get(`${API_BASE_URL}/purchase/get-purchase-by-id/${purchaseId}`); // Adjust URL based on your backend route
         console.log(response.data)
         setPurchase(response.data);
         setLoading(false);

@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import API_BASE_URL from "../config";
 
 const ModelViewer = () => {
     const params = useParams();
@@ -14,7 +15,7 @@ const ModelViewer = () => {
 
     const fetchModel = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/furniture/get-furniture-model/${furnitureId}`);
+            const res = await axios.get(`${API_BASE_URL}/furniture/get-furniture-model/${furnitureId}`);
             const data = res.data;
             console.log(data);
             setModelUrls({

@@ -3,7 +3,8 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import Cards from "./Cards";
 import Footer from "./Footer";
-
+import API_BASE_URL from "../config";
+ 
 const Main = ()=>{
     const cardRef = useRef(null); // Create a reference for the Card section
 
@@ -16,7 +17,7 @@ const Main = ()=>{
 
     useEffect(()=>{
       
-      fetch("http://localhost:8000/furniture/get-furnitures",{
+      fetch(`${API_BASE_URL}/furniture/get-furnitures`,{
         method:"GET",
         "Accept":"application/json",
         "Content-Type":"application/json",
